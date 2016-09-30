@@ -12,33 +12,29 @@ public class B01 {
 	private void start() {
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
-		System.out.print("첫번째 숫자를 입력하세요 : ");
-		int num1 = s.nextInt();
-		System.out.print("두번째 숫자를 입력하세요 : ");
-		int num2 = s.nextInt();
-		System.out.print("세번째 숫자를 입력하세요 : ");
-		int num3 = s.nextInt();
-		check(num1, num2, num3);
+		int[] num = new int[3];
+		
+		for(int i=0;i<num.length;i++) {
+			System.out.print((i+1)+"번째 숫자를 입력하세요 : ");
+			num[i] = s.nextInt();
+		}
+		
+		check(num);
 	}
 
-	private void check(int a, int b, int c) {
+	private void check(int[] n) {
 		// TODO Auto-generated method stub
-		int max_num = a;
-		int min_num = c;
+		int max_num = n[0];
+		int min_num = n[0];
 		
-		if(max_num<min_num) {
-			min_num=a;
-			max_num=c;
-			if(max_num<b) {
-				max_num=b;
+		for(int i=1;i<n.length;i++) {
+			if(n[i]>max_num) {
+				max_num=n[i];
 			}
-			if(min_num>b) {
-				min_num=b;
+			else if(n[i]<min_num) {
+				min_num=n[i];
 			}
 		}
 		System.out.println("가장 큰 수는 "+max_num+" 이고, 가장 작은 수는 "+min_num+" 입니다.");
 	}
-	
-	
-
 }
