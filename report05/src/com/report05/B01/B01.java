@@ -24,18 +24,19 @@ public class B01 {
 	private void check(int a, int b, int c) {
 		// TODO Auto-generated method stub
 		int max_num = a;
-		int min_num = b;
+		int min_num = c;
 		
-		if(a>b) {
-			if(b>c) {
-				max_num=a;
-				min_num=c;
+		if(max_num<min_num) {
+			min_num=a;
+			max_num=c;
+			if(max_num<b) {
+				max_num=b;
 			}
-			else {
-				
+			if(min_num>b) {
+				min_num=b;
 			}
 		}
-		
+		System.out.println("가장 큰 수는 "+max_num+" 이고, 가장 작은 수는 "+min_num+" 입니다.");
 	}
 	
 	
