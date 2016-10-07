@@ -2,7 +2,7 @@ import java.util.*;
 
 class B04 {
   
-  public void main(String[] args) {
+  public static void main(String[] args) {
     new B04().start();
   }
   
