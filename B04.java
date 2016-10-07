@@ -8,6 +8,8 @@ class B04 {
   
   private void start() {
     Scanner s = new Scanner(System.in);
-    System.out.print("연봉 원단위 입력하.)
+    System.out.print("연봉 원단위 입력하세");
+    int sal = s.nextInt();
+    int 
   }
 }
